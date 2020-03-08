@@ -1,6 +1,7 @@
 export default (state = [], action) => {
   switch (action.type) {
     case 'ADD_QUOTE':
+      console.log(state.quote)
       return [...state, action.quote]
     case 'REMOVE_QUOTE':
       return state.filter(quote => quote.id !== action.quoteId)
